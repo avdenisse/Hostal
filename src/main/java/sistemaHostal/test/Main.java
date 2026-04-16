@@ -50,7 +50,7 @@ public class Main {
                     break;
 
                 case 2:
-                    sc.nextLine();
+
 
                     System.out.println("Nombre cliente:");
                     String nombre = sc.nextLine();

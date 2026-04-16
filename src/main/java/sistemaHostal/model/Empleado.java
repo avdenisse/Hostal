@@ -56,11 +56,21 @@ public class Empleado implements IServiceReserva {
         return precio * reserva.getDias();
     }
 
+    public void mostrarReserva() {
+        mostrarReserva(null);
+    }
+
     @Override
     public void mostrarReserva(Reserva reserva) {
         if (reserva != null) {
             System.out.println("Empleado: " + nombre);
-            System.out.println("Cliente: " + reserva.getCliente().getNombre());
+            System.out.println(
+                    "Cliente: "
+                            + reserva.getCliente().getNombre()
+                            + " "
+                            + reserva.getCliente().getApellido()
+            );
+            System.out.println("Telefono del Cliente: " + reserva.getCliente().getNumTel());
             System.out.println("Habitación: " + reserva.getHabitacion().getNumHabitacion());
             System.out.println("Días: " + reserva.getDias());
             System.out.println("Total: " + reserva.getTotal());
